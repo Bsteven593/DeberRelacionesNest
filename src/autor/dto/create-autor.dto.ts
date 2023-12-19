@@ -1,4 +1,4 @@
-import { IsArray, IsDateString, IsNumber, IsOptional, IsString, MaxLength } from "class-validator";
+import { IsArray, IsNumber, IsOptional, IsString, MaxLength } from "class-validator";
 
 export class CreateAutorDto {
     @IsOptional()
@@ -9,18 +9,18 @@ export class CreateAutorDto {
     @MaxLength(100, { message: 'El nombre no puede tener más de 100 caracteres' })
     Nombre: string;
 
-    @IsDateString()
-    fechaNacimiento: string;
+    @IsString()
+    Apellido: string;
 
     @IsOptional()
     @IsString({ message: 'La nacionalidad debe ser una cadena de texto' })
     @MaxLength(100, { message: 'La nacionalidad no puede tener más de 100 caracteres' })
-    nacionalidad?: string;
+    Edad?: string;
 
     @IsOptional()
     @IsString({ message: 'El género literario debe ser una cadena de texto' })
     @MaxLength(100, { message: 'El género literario no puede tener más de 100 caracteres' })
-    generoLiterario?: string;
+    Pais?: string;
 
     @IsOptional()
     @IsArray({ message: 'La lista de libros debe ser un array' })

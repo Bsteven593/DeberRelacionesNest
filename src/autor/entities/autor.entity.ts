@@ -10,13 +10,13 @@ export class Autor {
   Nombre: string;
 
   @Column('varchar')
-  fechaNacimiento: string;
+  Apellido: string;
 
   @Column('varchar', { nullable: true })
-  nacionalidad: string;
+  Edad: string;
 
   @Column('varchar', { nullable: true })
-  generoLiterario: string;
+   Pais:string;
 
   // Agrega más campos según sea necesario
 
